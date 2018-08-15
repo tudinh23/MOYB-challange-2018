@@ -12,16 +12,45 @@
 <div class="asset-container">
     <div class="container-fluid mt-4">
         <div class="row">
+            <script>
+                var data1 = []
+                <% for(i = 0; i < data.length; i++){ %>
+                data1.push("<%=data[i].title%>")
+                <%}%>
+
+            </script>
             <% for(i = 0; i < data.length; i++){ %>
             <div class="col-mb align-self-center">
                 <div class="card" style="width: 18rem;">
                     <img class="card-img-top" src="//placehold.it/500x500" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title"><%=data[i].title%></h5>
-                        <p class="card-text"><%=data[i].description%></p>
-                        <form method="post" action="/listing">
-                            <button type="submit" name="buttonType" value="<%=data[i].title%>" class="btn btn-primary">More Info</button>
-                        </form>
+                        <div id="asset-button-container<%=data[i].title.replace(/ /g,'')%>" style="
+                        width: 160px;
+                        height: 36px;
+                        margin: auto;
+                        position: relative;
+                        border-radius: 6px;
+                        overflow: hidden;
+                        user-select: none;
+                        cursor: pointer;">
+                            <div class="inner-container">
+                                <div class="toggle">
+                                    <p>Available</p>
+                                </div>
+                                <div class="toggle">
+                                    <p>Unavailable</p>
+                                </div>
+                            </div>
+                            <div class="inner-container" id='toggle-container<%=data[i].title.replace(/ /g,'')%>'>
+                                <div class="toggle">
+                                    <p>Available</p>
+                                </div>
+                                <div class="toggle">
+                                    <p>Unavailable</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -34,5 +63,6 @@
 </footer>
 
 <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+<script src="/javascripts/javascript.js" ></script>
 </body>
 </html>

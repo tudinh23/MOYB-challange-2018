@@ -19,15 +19,13 @@ router.get('/', function(req, res, next) {
     });
 
     promises.then(() => {
-        res.render('index', {
+        res.render('myAssets', {
             data: data
         });
     });
 });
 
 router.post('/', function(req, res, next) {
-    console.log("asdfasdfsad");
-    res.redirect('/listing');
 });
 
 module.exports = router;

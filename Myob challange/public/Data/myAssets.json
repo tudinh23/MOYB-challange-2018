@@ -1,3 +1,14 @@
 [
-
+  {
+    "title" : "Jack Hammer",
+    "description" : "Jack hammer, Pretty new, hasnt had much use",
+    "status" : "available",
+    "category" : "tools"
+  },
+  {
+    "title" : "Circular Saw",
+    "description" : "Circular, Pretty new, hasnt had much use",
+    "status" : "on rent",
+    "category" : "tools"
+  }
 ]
