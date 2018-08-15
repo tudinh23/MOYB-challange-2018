@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Myob challange.iml" filepath="$PROJECT_DIR$/.idea/Myob challange.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Myob challange.iml" filepath="$PROJECT_DIR$/Myob challange.iml" />
     </modules>
   </component>
 </project>

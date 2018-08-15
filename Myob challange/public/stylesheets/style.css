@@ -65,7 +65,7 @@ body{
 }
 
 .listing-container{
-    height: 700px;
+    height: 80vh;
     width: 70%;
     margin-left: auto;
     margin-right: auto;
