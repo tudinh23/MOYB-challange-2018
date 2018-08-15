@@ -1,0 +1,85 @@
+body{
+    width: 100%;
+}
+.nav{
+    border-color: #ad98e7;
+    height: 60px;
+    width: 70%;
+    margin: auto;
+    font-size: 10pt;
+}
+
+.mt-4, .my-4 {
+    margin-top: 7rem!important;
+}
+
+.nav-item{
+    padding-top: 12px;
+    position: relative;
+}
+
+
+#logo {
+    padding-top: 15.5px;
+}
+
+.nav-link{
+    color: #ffffff;
+
+}
+
+.nav a:hover { color: #ffffff; }
+
+.align-self-center {
+    align-self: center!important;
+    padding-left: 2px;
+    padding-right: 3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.nav-container{
+    /*background-image: linear-gradient(to right, #e389ec, #e272ce, #dd5ab0, #d64290, #cb2771);*/
+    background-image: linear-gradient(to right, #f464bc, #d949b9, #b92fb7, #9418b6, #6607b5);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 500;
+}
+
+.listing-container-left{
+    float: left;
+    width:70%;
+    height: 100%;
+    margin-right: 10px;
+    background-color: #e3e3e8;
+    margin-left: auto;
+}
+.listing-container-right{
+    float: left;
+    width:25%;
+    height:100%;
+    margin-left: 10px;
+    background-color: #e3e3e8;
+    margin-right: auto;
+}
+
+.listing-container{
+    height: 700px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+.listing-container-left-top{
+    max-width:900px!important;
+    max-height:600px!important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-item{
+    max-height:400px!important;
+}
+

@@ -1,0 +1,51 @@
+[
+  {
+    "title" : "Jack Hammer",
+    "description" : "Jack hammer, Pretty new, hasnt had much use",
+    "price" : 1234,
+    "category" : "tools",
+    "featured" : false
+  },
+  {
+    "title" : "Circular Saw",
+    "description" : "Circular, Pretty new, hasnt had much use",
+    "price" : 1234,
+    "category" : "tools",
+    "featured" : false
+  },
+  {
+    "title" : "Ice cream fridge",
+    "description" : "Icecream Fridge, Pretty new, hasnt had much use",
+    "price" : 1234,
+    "category" : "kitchen",
+    "featured" : false
+  },
+  {
+    "title" : "Van",
+    "description" : "Van, Low milage, hasnt had much use",
+    "price" : 1234,
+    "category" : "vehical",
+    "featured" : false
+  },
+  {
+    "title" : "Oven",
+    "description" : "oven, Pretty new, hasnt had much use",
+    "price" : 1234,
+    "category" : "kitchen",
+    "featured" : false
+  },
+  {
+    "title" : "Circular Saw",
+    "description" : "Pretty new, hasnt had much use",
+    "price" : 1234,
+    "category" : "tools",
+    "featured" : false
+  },
+  {
+    "title" : "Circular Saw",
+    "description" : "Pretty new, hasnt had much use",
+    "price" : 1234,
+    "category" : "tools",
+    "featured" : false
+  }
+]
