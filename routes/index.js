@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
     var data = [];
 
     let promises = new Promise(function(resolve, reject) {
-        fs.readFile('../Myob challange/public/Data/Listings.json', 'utf8',(err, fileContent) => {
+        fs.readFile('../MOYB-challange-2018/public/Data/Listings.json', 'utf8',(err, fileContent) => {
             if( err ) {
                 console.log(err);
                 reject();
