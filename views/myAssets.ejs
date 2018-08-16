@@ -14,8 +14,13 @@
         <div class="row">
             <script>
                 var data1 = []
+
                 <% for(i = 0; i < data.length; i++){ %>
-                data1.push("<%=data[i].title%>")
+
+                data1.push({
+                    key:   "<%=data[i].title%>",
+                    value: "<%=data[i].status%>"
+                })
                 <%}%>
 
             </script>
@@ -25,7 +30,7 @@
                     <img class="card-img-top" src="//placehold.it/500x500" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title"><%=data[i].title%></h5>
-                        <div id="asset-button-container<%=data[i].title.replace(/ /g,'')%>" style="
+                        <div id="asset-button-container<%=data[i].title.replace(/ /g,'-')%>" style="
                         width: 160px;
                         height: 36px;
                         margin: auto;
@@ -36,18 +41,18 @@
                         cursor: pointer;">
                             <div class="inner-container">
                                 <div class="toggle">
-                                    <p>Available</p>
+                                    <p>Unavailable</p>
                                 </div>
                                 <div class="toggle">
-                                    <p>Unavailable</p>
+                                    <p>Available</p>
                                 </div>
                             </div>
-                            <div class="inner-container" id='toggle-container<%=data[i].title.replace(/ /g,'')%>'>
-                                <div class="toggle">
-                                    <p>Available</p>
-                                </div>
+                            <div class="inner-container" id='toggle-container<%=data[i].title.replace(/ /g,'-')%>'>
                                 <div class="toggle">
                                     <p>Unavailable</p>
+                                </div>
+                                <div class="toggle">
+                                    <p>Available</p>
                                 </div>
                             </div>
                         </div>

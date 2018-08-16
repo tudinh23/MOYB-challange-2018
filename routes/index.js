@@ -4,35 +4,29 @@ var fs = require('fs');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-   res.render('listing');
-});
+    var data = [];
 
-
-router.post('/', function(req, res, next) {
-    var listingData = [];
     let promises = new Promise(function(resolve, reject) {
         fs.readFile('../Myob challange/public/Data/Listings.json', 'utf8',(err, fileContent) => {
             if( err ) {
                 console.log(err);
                 reject();
             } else {
-                var data = JSON.parse(fileContent.toString());
-                for (var key in data) {
-
-                    if (data[key].title == req.body.buttonType) {
-                        listingData = data[key];
-                    }
-                }
+                data = JSON.parse(fileContent.toString());
                 resolve();
             }
         });
     });
 
     promises.then(() => {
-        res.render('listing', {
-            listingData: listingData
+        res.render('index', {
+            data: data
         });
     });
+});
+
+router.post('/', function(req, res, next) {
+    console.log(req.body)
 
 });
 

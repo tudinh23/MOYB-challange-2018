@@ -4,7 +4,7 @@ var path = require('path')
 var http = require('http');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
-const PORT = 3000
+const PORT = process.env.PORT || 3000
 
 var index = require('./routes/index');
 var listing = require('./routes/listing');
