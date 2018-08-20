@@ -4,48 +4,55 @@
     "description" : "Jack hammer, Pretty new, hasnt had much use",
     "price" : 1234,
     "category" : "tools",
-    "featured" : false
+    "featured" : false,
+    "type" : "request"
   },
   {
     "title" : "Circular Saw",
     "description" : "Circular, Pretty new, hasnt had much use",
     "price" : 1234,
     "category" : "tools",
-    "featured" : false
+    "featured" : true,
+    "type" : "listing"
   },
   {
     "title" : "Ice cream fridge",
-    "description" : "Icecream Fridge, Pretty new, hasnt had much use",
+    "description" : "Looking for an ice cream fridge for the next 2 days",
     "price" : 1234,
     "category" : "kitchen",
-    "featured" : false
+    "featured" : true,
+    "type" : "request"
   },
   {
     "title" : "Van",
     "description" : "Van, Low milage, hasnt had much use",
     "price" : 1234,
     "category" : "vehical",
-    "featured" : false
+    "featured" : true,
+    "type" : "listing"
   },
   {
     "title" : "Oven",
     "description" : "oven, Pretty new, hasnt had much use",
     "price" : 1234,
     "category" : "kitchen",
-    "featured" : false
+    "featured" : true,
+    "type" : "listing"
   },
   {
     "title" : "Circular Saw",
-    "description" : "Pretty new, hasnt had much use",
+    "description" : "Pretty new, hasnt had much usesadfasdfadsfa",
     "price" : 1234,
     "category" : "tools",
-    "featured" : false
+    "featured" : false,
+    "type" : "listing"
   },
   {
     "title" : "Circular Saw",
-    "description" : "Pretty new, hasnt had much use",
+    "description" : "Pretty new, hasnt had much use fasdlfkjasdlfkjdsaf",
     "price" : 1234,
     "category" : "tools",
-    "featured" : false
+    "featured" : false,
+    "type" : "listing"
   }
 ]

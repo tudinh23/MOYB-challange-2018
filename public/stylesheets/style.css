@@ -26,7 +26,10 @@ body{
 
 .nav-link{
     color: #ffffff;
+}
 
+.nav-link.tab{
+    color: black;
 }
 
 .nav a:hover { color: #ffffff; }
@@ -131,4 +134,38 @@ body{
 
 .toggle:nth-child(1) {
     right: 0;
+}
+
+.home-container{
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+}
+#home-top{
+    margin-top: 100px;
+    height: 30vh;
+    width: 100%;
+    margin-bottom: 30px;
+}
+#home-bottom{
+    margin-top: 20px;
+    height: 50vh;
+    width: 100%;
+}
+
+#home-left{
+    width: 50%;
+    margin-right: auto;
+    float: left;
+}
+
+#home-right{
+    width: 50%;
+    margin-left: auto;
+    float: right;
+}
+
+.tabContainer{
+    padding-top: 80px;
+    color: black;
 }

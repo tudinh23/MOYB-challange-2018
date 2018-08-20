@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var bodyParser = require('body-parser')
 var fs = require('fs');
 
 /* GET home page. */
@@ -8,7 +7,7 @@ router.get('/', function(req, res, next) {
     var data = [];
 
     let promises = new Promise(function(resolve, reject) {
-        fs.readFile('../MOYB-challange-2018/public/Data/myAssets.json', 'utf8',(err, fileContent) => {
+        fs.readFile('../MOYB-challange-2018/public/Data/Listings.json', 'utf8',(err, fileContent) => {
             if( err ) {
                 console.log(err);
                 reject();
@@ -20,16 +19,15 @@ router.get('/', function(req, res, next) {
     });
 
     promises.then(() => {
-        res.render('myAssets', {
+        res.render('market', {
             data: data
         });
     });
 });
 
-
 router.post('/', function(req, res, next) {
-    console.log(req.body.name);
-});
+    console.log(req.body)
 
+});
 
 module.exports = router;

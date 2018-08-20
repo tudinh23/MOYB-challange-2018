@@ -9,7 +9,7 @@ window.onload = function () {
             var selector = $(this).attr('id').substring(22);
             var name = $(this).attr('id').substring(22).replace('-',' ');
             console.log(name)
-            fetch('http://ec2-54-186-160-81.us-west-2.compute.amazonaws.com:9000/myAssets', {
+            fetch('http://localhost:9000/myAssets', {
                 method: 'post',
                 headers: {
                     'Accept': 'application/json',

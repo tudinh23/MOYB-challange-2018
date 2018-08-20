@@ -7,8 +7,12 @@ var bodyParser = require('body-parser');
 const PORT = process.env.PORT || 9000
 
 var index = require('./routes/index');
+var market = require('./routes/market');
 var listing = require('./routes/listing');
 var myAssets = require('./routes/myAssets');
+var addAsset = require('./routes/addAsset');
+var createListing = require('./routes/createListing');
+
 
 var app = express();
 
@@ -30,6 +34,9 @@ server.on('listening', onListening);
 app.use('/', index);
 app.use('/listing', listing);
 app.use('/myAssets', myAssets);
+app.use('/market', market);
+app.use('/addAsset', addAsset);
+app.use('/createListing', createListing);
 
 
 function onError(error) {
