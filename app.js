@@ -4,7 +4,6 @@ var path = require('path')
 var http = require('http');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
-const PORT = process.env.PORT || 9000
 
 var index = require('./routes/index');
 var market = require('./routes/market');
@@ -24,13 +23,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-app.set('port', PORT);
-var server = http.createServer(app);
-
-server.listen(PORT);
-server.on('error', onError);
-server.on('listening', onListening);
-
 
 app.use('/', index);
 app.use('/listing', listing);
@@ -40,37 +32,18 @@ app.use('/addAsset', addAsset);
 app.use('/createListing', createListing);
 app.use('/login', login);
 
+app.use(function(req, res, next) {
+    next(createError(404));
+});
 
-function onError(error) {
-    if (error.syscall !== 'listen') {
-        throw error;
-    }
+// error handler
+app.use(function(err, req, res, next) {
+    // set locals, only providing error in development
+    res.locals.message = err.message;
+    res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-    var bind = typeof port === 'string'
-        ? 'Pipe ' + port
-        : 'Port ' + port;
-
-    // handle specific listen errors with friendly messages
-    switch (error.code) {
-        case 'EACCES':
-            console.error(bind + ' requires elevated privileges');
-            process.exit(1);
-            break;
-        case 'EADDRINUSE':
-            console.error(bind + ' is already in use');
-            process.exit(1);
-            break;
-        default:
-            throw error;
-    }
-}
-
-function onListening() {
-    var addr = server.address();
-    var bind = typeof addr === 'string'
-        ? 'pipe ' + addr
-        : 'port ' + addr.port;
-    debug('Listening on ' + bind);
-}
+    // render the error page
+    res.status(err.status || 500);
+});
 
 module.exports = app;
