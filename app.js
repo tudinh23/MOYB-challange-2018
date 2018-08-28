@@ -12,6 +12,8 @@ var myAssets = require('./routes/myAssets');
 var addAsset = require('./routes/addAsset');
 var createListing = require('./routes/createListing');
 var login = require('./routes/login');
+var seller = require('./routes/seller');
+var seller2 = require('./routes/seller2');
 
 
 var app = express();
@@ -31,6 +33,9 @@ app.use('/market', market);
 app.use('/addAsset', addAsset);
 app.use('/createListing', createListing);
 app.use('/login', login);
+app.use('/seller', seller);
+app.use('/seller2', seller2);
+
 
 app.use(function(req, res, next) {
     next(createError(404));

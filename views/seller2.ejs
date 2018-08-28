@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <% include partials/header%>
+</head>
+<body>
+<div class="nav-container">
+    <% include partials/nav%>
+</div>
+
+<div class="container" style="padding-top: 20px">
+
+    <div class="container-fluid mt-4">
+        <div class="alert alert-danger" role="alert">
+            This seller has a guideline strike for repeated late returns or payment
+        </div>
+        <h3>Users other listings<hr/></h3>
+        <div class="row">
+            <div class="col-mb align-self-center">
+                <div class="card" style="width: 19rem;">
+                    <img class="card-img-top" src="//placehold.it/500x500" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">[[LISTING]] Van</h5>
+                        <p class="card-text">Van, Low milage, hasnt had much use</p>
+                        <form method="post" action="/listing">
+                            <button type="submit" name="buttonType" value="Van" class="btn btn-primary">More Info</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <h3>User feedback<hr/></h3>
+    <img src="../images/2-star.jpg" style="width: 10%;">
+    <h5>Poor communication, late payment, would not recommend</h5>
+    <br>
+    <img src="../images/1-star.jpg" style="width: 10%;">
+    <h5>Late return :(</h5>
+
+</div>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+<script src="/javascripts/javascript.js" ></script>
+</body>
+</html>

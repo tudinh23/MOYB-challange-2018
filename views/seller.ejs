@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <% include partials/header%>
+</head>
+<body>
+<div class="nav-container">
+    <% include partials/nav%>
+</div>
+
+<div class="container" style="padding-top: 20px">
+    <div class="container-fluid mt-4">
+        <h3>Users other listings<hr/></h3>
+        <div class="row">
+            <div class="col-mb align-self-center">
+                <div class="card" style="width: 19rem;">
+                    <img class="card-img-top" src="//placehold.it/500x500" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">[REQUEST] Jack Hammer</h5>
+                        <p class="card-text">Jack hammer, Pretty new, hasnt had much use</p>
+                        <form method="post" action="/listing">
+                            <button type="submit" name="buttonType" value="Jack Hammer" class="btn btn-primary">More Info</button>
+                        </form>
+                    </div>
+                </div>
+            </div><div class="col-mb align-self-center">
+                <div class="card" style="width: 19rem;">
+                    <img class="card-img-top" src="//placehold.it/500x500" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">[LISTING] Circular Saw</h5>
+                        <p class="card-text">Pretty new, hasnt had much use fasdlfkjasdlfkjdsaf</p>
+                        <form method="post" action="/listing">
+                            <button type="submit" name="buttonType" value="Circular Saw" class="btn btn-primary">More Info</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <h3>User feedback<hr/></h3>
+    <img src="../images/4.5-star.jpg" style="width: 10%;">
+    <h5>Good rent, would recommend</h5>
+    <br>
+    <img src="../images/5-star.jpg" style="width: 10%;">
+    <h5>Great rent, would definitely rent with again</h5>
+
+</div>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+<script src="/javascripts/javascript.js" ></script>
+</body>
+</html>

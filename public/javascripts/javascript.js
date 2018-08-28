@@ -4,7 +4,6 @@ window.onload = function () {
         var toggle = document.getElementById('asset-button-container'+data1[i].key.replace(/ /g,'-'));
         var toggleContainer = document.getElementById('toggle-container'+data1[i].key.replace(/ /g,'-'));
         var toggleNumber;
-        console.log(data1)
         toggle.addEventListener('click', function() {
             var selector = $(this).attr('id').substring(22);
             var name = $(this).attr('id').substring(22).replace('-',' ');
@@ -36,14 +35,3 @@ window.onload = function () {
 }
 
 
-document.onkeyup = function(e) {
-    if (e.which == 77) {
-        alert("M key was pressed");
-    } else if (e.ctrlKey && e.which == 66) {
-        alert("Ctrl + B shortcut combination was pressed");
-    } else if (e.ctrlKey && e.altKey && e.which == 89) {
-        alert("Ctrl + Alt + Y shortcut combination was pressed");
-    } else if (e.ctrlKey && e.altKey && e.shiftKey && e.which == 85) {
-        alert("Ctrl + Alt + Shift + U shortcut combination was pressed");
-    }
-};
