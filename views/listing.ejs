@@ -36,17 +36,35 @@
         </div>
         <div>
             <div class="listing-container-left-bottom">
-                <div class="container">
+                <div class="container pt-3">
                     <h1 class="display-4"><%=listingData.title%></h1>
+                    <h2>$<%=listingData.price%>/day</h2>
                     <p class="lead"><%=listingData.description%></p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="listing-container-right"> </div>
+    <div class="listing-container-right p-3">
+        <h3>$<%=listingData.price%>/day</h3>
+        <h4>Hire</h4>
+        <label class="d-inline-block w-100" for="datepickerFrom">From:
+            <input id="datepickerFrom" width="100%" />
+        </label>
+        <label class="d-inline-block w-100" for="datepickerTo">To:
+            <input id="datepickerTo" width="100%" />
+        </label>
+    </div>
 </div>
 
 <footer>
+    <script>
+        $('#datepickerFrom').datepicker({
+            uiLibrary: 'bootstrap4'
+        });
+        $('#datepickerTo').datepicker({
+            uiLibrary: 'bootstrap4'
+        });
+    </script>
 </footer>
 
 <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
