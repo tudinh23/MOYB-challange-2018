@@ -2,27 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3472fa5c-fe26-4d91-8988-fa504b1d281a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/1-star.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/1.5-star.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/2-star.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/2.5-star.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/3-star.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/3.5-star.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/4-star.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/4.5-star.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/5-star.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/seller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/seller2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/currentRentals.ejs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/seller.ejs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/seller2.ejs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/javascript.js" afterPath="$PROJECT_DIR$/public/javascripts/javascript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/createListing.js" afterPath="$PROJECT_DIR$/routes/createListing.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.ejs" afterPath="$PROJECT_DIR$/views/index.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/login.ejs" afterPath="$PROJECT_DIR$/views/login.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/myAssets.ejs" afterPath="$PROJECT_DIR$/views/myAssets.ejs" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,11 +34,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="createListing.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="createListing.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/createListing.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="696">
               <caret line="29" column="7" lean-forward="false" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="856">
+              <caret line="72" column="11" lean-forward="false" selection-start-line="72" selection-start-column="11" selection-end-line="72" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -98,16 +89,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
               <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="seller.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/seller.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="54" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -187,6 +168,7 @@
         <option value="$PROJECT_DIR$/views/index.ejs" />
         <option value="$PROJECT_DIR$/public/Data/Listings.json" />
         <option value="$PROJECT_DIR$/routes/createListing.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -408,12 +390,12 @@
       <workItem from="1534831998740" duration="15000" />
       <workItem from="1534979324381" duration="24000" />
       <workItem from="1535376437791" duration="13219000" />
-      <workItem from="1535449064904" duration="9498000" />
+      <workItem from="1535449064904" duration="9819000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64687000" />
+    <option name="totallyTimeSpent" value="65008000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="2578" height="1408" extended-state="6" />
@@ -465,13 +447,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/myAssets.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="21" column="38" lean-forward="false" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/Data/Listings.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -843,6 +818,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="696">
           <caret line="29" column="7" lean-forward="false" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="856">
+          <caret line="72" column="11" lean-forward="false" selection-start-line="72" selection-start-column="11" selection-end-line="72" selection-end-column="11" />
           <folding />
         </state>
       </provider>
