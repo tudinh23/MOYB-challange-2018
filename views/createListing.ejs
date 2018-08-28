@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <% include partials/header %>
@@ -45,93 +44,43 @@
                     <p>Value: <span id="demo"></span></p>
                 </div>
 
-                <script>
-                    var slider = document.getElementById("myRange");
-                    var output = document.getElementById("demo");
-                    output.innerHTML = slider.value;
+                <select class="custom-select custom-select-lg mb-3">
+                    <option selected>Categories</option>
+                    <option value="1">Tools</option>
+                    <option value="2">Kitchen</option>
+                    <option value="3">Vehicle</option>
+                </select>
 
-                    slider.oninput = function () {
-                        output.innerHTML = this.value;
-                    }
-                </script>
-
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Categories
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Tools</a>
-                        <a class="dropdown-item" href="#">Kitchen</a>
-                        <a class="dropdown-item" href="#">Vehicle</a>
-                    </div>
-                </div>
-
-
-                <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Feature on marketplace</label>
-
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
-
-        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-          <form>
-              <div class="form-group">
-                  <label for="exampleInputEmail1">Title of Product</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                         placeholder="Enter Title">
-              </div>
-              <div class="form-group">
-                  <label for="exampleInputPassword1">Description</label>
-                  <input type="email" class="form-control" id="exampleInputPassword1"
-                         placeholder="Description of the title">
-              </div>
-              <label for="exampleInputPassword1">Price Per day</label>
-              <div class="slidecontainer">
-                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-                  <p>Value: <span id="demo"></span></p>
-              </div>
-
-              <script>
-                  var slider = document.getElementById("myRange");
-                  var output = document.getElementById("demo");
-                  output.innerHTML = slider.value;
-
-                  slider.oninput = function () {
-                      output.innerHTML = this.value;
-                  }
-              </script>
-
-              <div class="dropdown">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Categories
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">Tools</a>
-                      <a class="dropdown-item" href="#">Kitchen</a>
-                      <a class="dropdown-item" href="#">Vehicle</a>
-                  </div>
-              </div>
-
-
-              <div class="form-group form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Feature on marketplace</label>
-
-              </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
         </div>
 
 
+        <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Feature on marketplace</label>
+
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
     </div>
+
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+    </div>
+
+
+</div>
 </div>
 <link rel="stylesheet" type="text/css" href="/stylesheets/style.css"/>
 <script src="/javascripts/javascript.js"></script>
+<script>
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    output.innerHTML = slider.value;
+
+    slider.oninput = function () {
+        output.innerHTML = this.value;
+    }
+</script>
+
 </body>
 
 </html>

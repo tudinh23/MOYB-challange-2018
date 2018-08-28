@@ -9,8 +9,17 @@
 <div class="nav-container">
     <% include partials/nav%>
 </div>
-<div class="container">
-<div class="container-fluid mt-4">
+<div class="container" style="padding-top: 95px">
+    <div class="topnav">
+        <select class="custom-select custom-select-lg mb-3">
+            <option selected>Sort By</option>
+            <option value="1">Tools</option>
+            <option value="2">Kitchen</option>
+            <option value="3">Vehicle</option>
+        </select>
+        <input type="text" placeholder="Search..">
+    </div>
+<div class="container-fluid ">
     <div class="row">
         <% for(i = 0; i < data.length; i++){ %>
         <div class="col-mb align-self-center">
