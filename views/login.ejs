@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <% include partials/header %>
+</head>
+<body>
+<div class="nav-container">
+    <ul class="nav">
+        <a id="logo" class="nav-link" href="/">
+            <img src="/images/logo1.png" width="40" height="32"><span></span> RYA</a>
+        </a>
+
+    </ul>
+
+</div>
+<div class="login">
+    <div class="login-container">
+        <div class="login-right">
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                           placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary" style=" width:  90%; background-color: #00aa65; border-color: #00aa65;" >Submit</button>
+            </form>
+        </div>
+        <div style="border-left:1px solid #d3d3d3;height: 100%;width:  1px;float: left;padding: 10px;"></div>
+        <div class="login-left">
+            <form class="login-form" style=" padding-top:  20px;">
+                <h2>Continue with:</h2>
+                <br>
+                <br>
+                <img src="/images/myob_logo.png" width="170" height="90">
+                <br>
+                <br>
+                <br>
+                <input class="btn btn-primary" type="button"
+                       onclick="location.href='https://secure.myob.com/oauth2/account/authorize?client_id=9bxeng29syyxqgw3f63tmpcn&redirect_uri=http://ec2-54-186-160-81.us-west-2.compute.amazonaws.com:9000&response_type=code&scope=la.global';"
+                       value="Connect" style=" width:  90%;border-color: #00aa65;background-color: #00aa65"/>
+            </form>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" type="text/css" href="/stylesheets/style.css"/>
+<script src="/javascripts/javascript.js"></script>
+</body>
+</html>

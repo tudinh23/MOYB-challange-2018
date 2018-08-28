@@ -12,6 +12,7 @@ var listing = require('./routes/listing');
 var myAssets = require('./routes/myAssets');
 var addAsset = require('./routes/addAsset');
 var createListing = require('./routes/createListing');
+var login = require('./routes/login');
 
 
 var app = express();
@@ -37,6 +38,7 @@ app.use('/myAssets', myAssets);
 app.use('/market', market);
 app.use('/addAsset', addAsset);
 app.use('/createListing', createListing);
+app.use('/login', login);
 
 
 function onError(error) {

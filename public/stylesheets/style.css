@@ -204,3 +204,35 @@ padding-top: 20px;
 
 
 }
+
+.login-container{
+    width: 20%;
+    text-align:  center;
+    margin-right: auto;
+    margin-left:auto;
+
+    width: 35%;
+    height: 300px;
+    text-align:  center;
+    margin-right: auto;
+    margin-left:auto;
+    border: 2px solid #d3d3d3;
+    border-radius: 3px;
+    padding: 10px;
+}
+.login{
+    padding-top: 250px;
+}
+
+.login-right{
+    float: left;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-left: 31px;
+}
+
+.login-left{
+    float: left;
+    height: 280px;
+    width: 45%;
+}
