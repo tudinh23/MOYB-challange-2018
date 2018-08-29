@@ -271,8 +271,9 @@ padding-top: 20px;
     float: right;
     padding: 6px;
     border: none;
-    margin-top: 8px;
-    margin-right: 16px;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
     font-size: 17px;
 }
 
@@ -289,4 +290,25 @@ padding-top: 20px;
     .topnav input[type=text] {
         border: 1px solid #ccc;
     }
+}
+
+.custom-select{
+    width: 150px;
+    width: 150px;
+    margin-top: 5px;
+
+}
+
+.topnav-left{
+    float: left;
+    text-align: center;
+    margin: 12px;
+}
+
+.gj-datepicker.gj-datepicker-bootstrap.gj-unselectable.input-group{
+    height: 37px;
+}
+
+.form-control{
+    height: 37px;
 }

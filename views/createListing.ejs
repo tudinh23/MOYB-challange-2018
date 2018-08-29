@@ -44,6 +44,15 @@
                     <p>Value: <span id="demo"></span></p>
                 </div>
 
+                <script>
+                    var slider = document.getElementById("myRange");
+                    var output = document.getElementById("demo");
+                    output.innerHTML = slider.value;
+
+                    slider.oninput = function () {
+                        output.innerHTML = this.value;
+                    }
+                </script>
                 <select class="custom-select custom-select-lg mb-3">
                     <option selected>Categories</option>
                     <option value="1">Tools</option>
@@ -51,36 +60,99 @@
                     <option value="3">Vehicle</option>
                 </select>
 
+                <label class="d-inline-block w-100" for="datepickerFrom">From:
+                    <input id="datepickerFrom" width="100%" height="37px"/>
+                </label>
+                <label class="d-inline-block w-100" for="datepickerTo">To:
+                    <input id="datepickerTo" width="100%"/>
+                </label>
+                <script>
+                    $('#datepickerFrom').datepicker({
+                        uiLibrary: 'bootstrap4'
+                    });
+                    $('#datepickerTo').datepicker({
+                        uiLibrary: 'bootstrap4'
+                    });
+                </script>
+
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Feature on marketplace</label>
+
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Title of Product</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                           placeholder="Enter Title">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Description</label>
+                    <input type="email" class="form-control" id="exampleInputPassword1"
+                           placeholder="Description of the title">
+                </div>
+                <label for="exampleInputPassword1">Price Per day</label>
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange1">
+                    <p>Value: <span id="demo1"></span></p>
+                </div>
+
+                <script>
+                    var slider1 = document.getElementById("myRange1");
+                    var output1 = document.getElementById("demo1");
+                    output1.innerHTML = slider1.value;
+
+                    slider1.oninput = function () {
+                        output1.innerHTML = this.value;
+                    }
+                </script>
+                <select class="custom-select custom-select-lg mb-3">
+                    <option selected>Categories</option>
+                    <option value="1">Tools</option>
+                    <option value="2">Kitchen</option>
+                    <option value="3">Vehicle</option>
+                </select>
+
+                <label class="d-inline-block w-100" for="datepickerFrom1">From:
+                    <input id="datepickerFrom1" width="100%" height="37px"/>
+                </label>
+                <label class="d-inline-block w-100" for="datepickerTo1">To:
+                    <input id="datepickerTo1" width="100%"/>
+                </label>
+                <script>
+                    $('#datepickerFrom1').datepicker({
+                        uiLibrary: 'bootstrap4'
+                    });
+                    $('#datepickerTo1').datepicker({
+                        uiLibrary: 'bootstrap4'
+                    });
+                </script>
+
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Feature on marketplace</label>
+
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
         </div>
 
 
-        <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Feature on marketplace</label>
-
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
     </div>
-
-    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-    </div>
-
-
 </div>
-</div>
+
+
 <link rel="stylesheet" type="text/css" href="/stylesheets/style.css"/>
 <script src="/javascripts/javascript.js"></script>
-<script>
-    var slider = document.getElementById("myRange");
-    var output = document.getElementById("demo");
-    output.innerHTML = slider.value;
-
-    slider.oninput = function () {
-        output.innerHTML = this.value;
-    }
-</script>
-
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gijgo@1.9.10/js/gijgo.min.js" type="text/javascript"></script>
+<link href="https://cdn.jsdelivr.net/npm/gijgo@1.9.10/css/gijgo.min.css" rel="stylesheet" type="text/css" />
 </body>
 
 </html>
