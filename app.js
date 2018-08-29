@@ -8,12 +8,13 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var market = require('./routes/market');
 var listing = require('./routes/listing');
-var myAssets = require('./routes/myAssets');
+var myAccount = require('./routes/myAccount');
 var addAsset = require('./routes/addAsset');
 var createListing = require('./routes/createListing');
 var login = require('./routes/login');
 var seller = require('./routes/seller');
 var seller2 = require('./routes/seller2');
+var myListing = require('./routes/myListing');
 
 
 var app = express();
@@ -28,13 +29,14 @@ app.set('view engine', 'ejs');
 
 app.use('/', index);
 app.use('/listing', listing);
-app.use('/myAssets', myAssets);
+app.use('/myAccount', myAccount);
 app.use('/market', market);
 app.use('/addAsset', addAsset);
 app.use('/createListing', createListing);
 app.use('/login', login);
 app.use('/seller', seller);
 app.use('/seller2', seller2);
+app.use('/myListing', myListing);
 
 
 app.use(function(req, res, next) {

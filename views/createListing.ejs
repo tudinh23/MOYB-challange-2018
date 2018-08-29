@@ -25,7 +25,7 @@
 </div>
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-    <form>
+    <form method="post" action="/createListing">
       <div class="form-group">
         <label for="exampleInputEmail1">Title of Product</label>
         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
@@ -77,13 +77,13 @@
                     <label class="form-check-label" for="exampleCheck1">Feature on marketplace</label>
 
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" name="buttonType" value="listing" class="btn btn-primary">Submit</button>
             </form>
         </div>
 
         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 
-            <form>
+            <form method="post" action="/createListing">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Title of Product</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
@@ -136,14 +136,14 @@
                     <label class="form-check-label" for="exampleCheck1">Feature on marketplace</label>
 
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit"  name="buttonType" value="request" class="btn btn-primary">Submit</button>
             </form>
         </div>
 
 
     </div>
+    <% include partials/chatbot %>
 </div>
-
 
 <link rel="stylesheet" type="text/css" href="/stylesheets/style.css"/>
 <script src="/javascripts/javascript.js"></script>

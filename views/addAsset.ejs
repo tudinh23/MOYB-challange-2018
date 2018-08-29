@@ -1,16 +1,73 @@
 <html lang="en">
 <head>
-    <% include partials/header%>
+    <% include partials/header %>
 </head>
-<body>
-<div class="nav-container">
-    <% include partials/nav%>
-</div>
+    <div class="nav-container">
+        <% include partials/nav %>
+    </div>
+    <div class="container" style="width: 50%; margin-top:  100px;">
+        <h2>Register Asset</h2>
+        <form method="post" action="/createListing">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Title of Product</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                       placeholder="Enter Title">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Description</label>
+                <input type="email" class="form-control" id="exampleInputPassword1"
+                       placeholder="Description of the title">
+            </div>
+            <label for="exampleInputPassword1">Price Per day</label>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange1">
+                <p>Value: <span id="demo1"></span></p>
+            </div>
 
-<footer>
-</footer>
+            <script>
+                var slider1 = document.getElementById("myRange1");
+                var output1 = document.getElementById("demo1");
+                output1.innerHTML = slider1.value;
 
-<link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
-<script src="/javascripts/javascript.js" ></script>
-</body>
+                slider1.oninput = function () {
+                    output1.innerHTML = this.value;
+                }
+            </script>
+            <select class="custom-select custom-select-lg mb-3">
+                <option selected>Categories</option>
+                <option value="1">Tools</option>
+                <option value="2">Kitchen</option>
+                <option value="3">Vehicle</option>
+            </select>
+
+            <label class="d-inline-block w-100" for="datepickerFrom1">From:
+                <input id="datepickerFrom1" width="100%" height="37px"/>
+            </label>
+            <label class="d-inline-block w-100" for="datepickerTo1">To:
+                <input id="datepickerTo1" width="100%"/>
+            </label>
+            <script>
+                $('#datepickerFrom1').datepicker({
+                    uiLibrary: 'bootstrap4'
+                });
+                $('#datepickerTo1').datepicker({
+                    uiLibrary: 'bootstrap4'
+                });
+            </script>
+
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Feature on marketplace</label>
+
+            </div>
+            <button type="submit" name="buttonType" value="request" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+    </footer>
+    <% include partials/chatbot %>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css"/>
+    <script src="/javascripts/javascript.js"></script>
+    </body>
 </html>

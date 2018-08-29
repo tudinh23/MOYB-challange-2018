@@ -1,6 +1,3 @@
-<!-- views/pages/market.ejs -->
-
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <% include partials/header%>
@@ -9,8 +6,10 @@
 <div class="nav-container">
     <% include partials/nav%>
 </div>
-<div class="asset-container">
+
+<div class="container" style="padding-top: 20px">
     <div class="container-fluid mt-4">
+        <h3>My Assets<hr/></h3>
         <div class="row">
             <script>
                 var data1 = []
@@ -61,13 +60,37 @@
             </div>
             <%}%>
         </div>
+        <h3>My listings<hr/></h3>
+        <div class="row">
+            <div class="col-mb align-self-center">
+                <div class="card" style="width: 19rem;">
+                    <img class="card-img-top" src="//placehold.it/500x500" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">[LISTING] Circular Saw</h5>
+                        <p class="card-text">Pretty new, hasnt had much use fasdlfkjasdlfkjdsaf</p>
+                        <form method="post" action="/myListing">
+                            <button type="submit" name="buttonType" value="Circular Saw" class="btn btn-primary">More Info</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <br>
+    <h3>My feedback<hr/></h3>
+    <img src="../images/5-star.jpg" style="width: 10%;">
+    <h5>Absolutely amazing, will definitely be back</h5>
+    <br>
+    <img src="../images/5-star.jpg" style="width: 10%;">
+    <h5>Creat experience, would definitely rent with again</h5>
+
 </div>
 
-<footer>
-</footer>
 
+
+<% include partials/chatbot %>
 <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
 <script src="/javascripts/javascript.js" ></script>
 </body>
 </html>
+

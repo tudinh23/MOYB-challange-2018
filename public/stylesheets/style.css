@@ -56,16 +56,17 @@ body{
     width:70%;
     height: 100%;
     margin-right: 10px;
-    background-color: #e3e3e8;
-    margin-left: auto;
+    background-color: #f3f1f3;
+    margin-left: 13px;
 }
 .listing-container-right{
     float: left;
     width:25%;
     height:100%;
     margin-left: 10px;
-    background-color: #e3e3e8;
+    background-color: #f3f1f3;
     margin-right: auto;
+    position: relative;
 }
 
 .listing-container{
@@ -311,4 +312,15 @@ padding-top: 20px;
 
 .form-control{
     height: 37px;
+}
+
+.tab-content{
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.listing-container-right-bottom{
+    position: absolute;
+    bottom: 0;
 }

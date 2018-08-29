@@ -20,7 +20,7 @@ router.get('/', function(req, res, next) {
     });
 
     promises.then(() => {
-        res.render('myAssets', {
+        res.render('myAccount', {
             data: data
         });
     });
