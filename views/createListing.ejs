@@ -1,70 +1,75 @@
 <html lang="en">
 <head>
-    <% include partials/header %>
+  <% include partials/header %>
 </head>
 
 <body>
-<div class="nav-container">
+  <div class="nav-container">
     <ul class="nav">
-        <a id="logo" class="nav-link" href="/">
-            <img src="/images/logo1.png" width="40" height="32"><span></span> RYA</a>
-        </a>
-
+      <a id="logo" class="nav-link" href="/">
+        <img src="/images/logo1.png" width="40" height="32"> RYA</a>
     </ul>
 </div>
 <div class="container">
     <div class="tabContainer">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item" style="width:  50%">
-                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
-                   aria-selected="true" style="color: #000000;">Listing</a>
-            </li>
-            <li class="nav-item" style="width:  50%">
-                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
-                   aria-controls="profile" aria-selected="false" style="color: #000000;">Request</a>
-            </li>
-        </ul>
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" style="width:  50%">
+          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+          aria-selected="true" style="color: #000000;">Listing</a>
+      </li>
+      <li class="nav-item" style="width:  50%">
+          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+          aria-controls="profile" aria-selected="false" style="color: #000000;">Request</a>
+      </li>
+  </ul>
+</div>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Title of Product</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+        placeholder="Enter Title">
     </div>
-    <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-            <form>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Title of Product</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                           placeholder="Enter Title">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Description</label>
-                    <input type="email" class="form-control" id="exampleInputPassword1"
-                           placeholder="Description of the title">
-                </div>
-                <label for="exampleInputPassword1">Price Per day</label>
-                <div class="slidecontainer">
-                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-                    <p>Value: <span id="demo"></span></p>
-                </div>
-
-                <select class="custom-select custom-select-lg mb-3">
-                    <option selected>Categories</option>
-                    <option value="1">Tools</option>
-                    <option value="2">Kitchen</option>
-                    <option value="3">Vehicle</option>
-                </select>
-
-        </div>
-
-
-        <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Feature on marketplace</label>
-
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Description</label>
+        <input type="email" class="form-control" id="exampleInputPassword1"
+        placeholder="Description of the title">
+    </div>
+    <label for="exampleInputPassword1">Price Per day</label>
+    <div class="slidecontainer">
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        <p>Value: <span id="demo"></span></p>
     </div>
 
-    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-    </div>
+    <select class="custom-select custom-select-lg mb-3">
+        <option selected>Categories</option>
+        <option value="1">Tools</option>
+        <option value="2">Kitchen</option>
+        <option value="3">Vehicle</option>
+    </select>
+
+    <label class="d-inline-block w-100" for="datepickerFrom">From:
+        <input id="datepickerFrom" width="100%" />
+    </label>
+    <label class="d-inline-block w-100" for="datepickerTo">To:
+        <input id="datepickerTo" width="100%" />
+    </label>
+
+</div>
+
+
+<div class="form-group form-check">
+  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+  <label class="form-check-label" for="exampleCheck1">Feature on marketplace</label>
+
+</div>
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+
+<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+</div>
 
 
 </div>
@@ -79,6 +84,13 @@
     slider.oninput = function () {
         output.innerHTML = this.value;
     }
+
+    $('#datepickerFrom').datepicker({
+        uiLibrary: 'bootstrap4'
+    });
+    $('#datepickerTo').datepicker({
+        uiLibrary: 'bootstrap4'
+    });
 </script>
 
 </body>
