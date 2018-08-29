@@ -38,5 +38,21 @@
     "category" : "kitchen",
     "featured" : true,
     "type" : "listing"
+  },
+  {
+    "title" : "Looking for Circular Saw",
+    "description" : "Circular Saw needed for a 3 day job",
+    "price" : 20,
+    "category" : "tools",
+    "featured" : true,
+    "type" : "request"
+  },
+  {
+    "title" : "Circular Saw",
+    "description" : "looking for a saw for the next few days",
+    "price" : 25,
+    "category" : "tools",
+    "featured" : true,
+    "type" : "request"
   }
 ]
