@@ -12,68 +12,74 @@
 </div>
 <div class="container">
     <div class="tabContainer">
-        <ul class="nav nav-tabs" id="listing" role="tablist">
+        <ul class="nav nav-tabs" id="createlisting-tab" role="tablist">
             <li class="nav-item" style="width:  50%">
-                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true" style="color: #000000;">Listing</a>
+                <a class="nav-link active" id="listing-tab" data-toggle="tab" href="#listing" role="tab" aria-controls="listing" aria-selected="true" style="color: #000000;">Listing</a>
             </li>
             <li class="nav-item" style="width:  50%">
-                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" style="color: #000000;">Request</a>
+                <a class="nav-link" id="request-tab" data-toggle="tab" href="#request" role="tab" aria-controls="request" aria-selected="false" style="color: #000000;">Request</a>
             </li>
         </ul>
     </div>
-    <div class="tab-content" id="listingContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+    <div class="tab-content" id="createlisting-tabContent">
+        <div class="tab-pane fade show active" id="listing" role="tabpanel" aria-labelledby="listing-tab">
             <form method="post" action="/createListing">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Title of Product</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Title">
+                    <label for="productTitle__listing">Title of Product</label>
+                    <input type="email" class="form-control" id="productTitle__listing" aria-describedby="emailHelp" placeholder="Enter Title">
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">Description</label>
-                    <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Description of the title">
+                    <label for="description">Description</label>
+                    <input type="email" class="form-control" id="description" placeholder="Description of the title">
                 </div>
-                <label for="exampleInputPassword1">Price Per day</label>
-                <div class="slidecontainer">
-                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-                    <p>Value: <span id="demo"></span></p>
-                </div>
-                <script>
-                    var slider = document.getElementById("myRange");
-                    var output = document.getElementById("demo");
-                    output.innerHTML = slider.value;
+                <div class="form-group">
+                    <label for="pricep">Price Per day</label>
+                    <div class="slidecontainer">
+                        <input type="range" min="1" max="100" value="50" class="slider" id="pricep">
+                        <p>Value: <span id="demo"></span></p>
+                    </div>
+                    <script>
+                        var slider = document.getElementById("myRange");
+                        var output = document.getElementById("demo");
+                        output.innerHTML = slider.value;
 
-                    slider.oninput = function () {
-                        output.innerHTML = this.value;
-                    }
-                </script>
-                <select class="custom-select custom-select-lg mb-3">
-                    <option selected>Categories</option>
-                    <option value="1">Tools</option>
-                    <option value="2">Kitchen</option>
-                    <option value="3">Vehicle</option>
-                </select>
-                <label class="d-inline-block w-100" for="datepickerFrom">From:
-                    <input id="datepickerFrom" width="100%" height="37px"/>
-                </label>
-                <label class="d-inline-block w-100" for="datepickerTo">To:
-                    <input id="datepickerTo" width="100%"/>
-                </label>
-                <script>
-                    $('#datepickerFrom').datepicker({
-                        uiLibrary: 'bootstrap4'
-                    });
-                    $('#datepickerTo').datepicker({
-                        uiLibrary: 'bootstrap4'
-                    });
-                </script>
+                        slider.oninput = function () {
+                            output.innerHTML = this.value;
+                        }
+                    </script>
+                </div>
+                <div class="form-group">
+                    <select class="custom-select custom-select-lg mb-3">
+                        <option selected>Categories</option>
+                        <option value="1">Tools</option>
+                        <option value="2">Kitchen</option>
+                        <option value="3">Vehicle</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="d-inline-block w-100" for="datepickerFrom">From:
+                        <input id="datepickerFrom" width="100%" height="37px"/>
+                    </label>
+                    <label class="d-inline-block w-100" for="datepickerTo">To:
+                        <input id="datepickerTo" width="100%"/>
+                    </label>
+                    <script>
+                        $('#datepickerFrom').datepicker({
+                            uiLibrary: 'bootstrap4'
+                        });
+                        $('#datepickerTo').datepicker({
+                            uiLibrary: 'bootstrap4'
+                        });
+                    </script>
+                </div>
                 <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Feature on marketplace</label>
+                    <input type="checkbox" class="form-check-input" id="featureMarketPlace__listing">
+                    <label class="form-check-label" for="featureMarketPlace__listing">Feature on marketplace</label>
                 </div>
                 <button type="submit" name="buttonType" value="listing" class="btn btn-primary">Submit</button>
             </form>
         </div>
-        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="tab-pane fade" id="request" role="tabpanel" aria-labelledby="request-tab">
             <form method="post" action="/createListing">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Title of Product</label>
@@ -118,8 +124,8 @@
             });
         </script>
         <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="featureMarketPlace">
-            <label class="form-check-label" for="featureMarketPlace">Feature on marketplace</label>
+            <input type="checkbox" class="form-check-input" id="featureMarketPlace__request">
+            <label class="form-check-label" for="featureMarketPlace__request">Feature on marketplace</label>
         </div>
         <button type="submit"  name="buttonType" value="request" class="btn btn-primary">Submit</button>
     </form>
