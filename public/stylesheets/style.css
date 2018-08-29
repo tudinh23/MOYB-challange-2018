@@ -18,6 +18,9 @@ body{
     position: relative;
 }
 
+.tab-pane.fade {
+    opacity: 1;
+}
 
 #logo {
     padding-top: 11.5px;
