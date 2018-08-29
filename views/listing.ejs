@@ -53,6 +53,7 @@
         <label class="d-inline-block w-100" for="datepickerTo">To:
             <input id="datepickerTo" width="100%" />
         </label>
+        <p id="total"></p>
     </div>
 </div>
 
@@ -63,6 +64,44 @@
         });
         $('#datepickerTo').datepicker({
             uiLibrary: 'bootstrap4'
+        });
+        var isDate_ = function(input) {
+            var status = false;
+            if (!input || input.length <= 0) {
+                status = false;
+            }
+            else {
+                var result = new Date(input);
+                if (result == 'Invalid Date') {
+                    status = false;
+                } 
+                else {
+                    status = true;
+                }
+            }
+            return status;
+        }
+
+        function parseDate(str) {
+            var mdy = str.split('/');
+            return new Date(mdy[2], mdy[0]-1, mdy[1]);
+        }
+
+        function dateDiff(first, second) {
+            return Math.round((second-first)/(1000*60*60*24));
+        }
+
+
+        $('#datepickerTo').change(function(event) {
+            var fromDate = $('#datepickerFrom').val();
+            var toDate = $('#datepickerTo').val();
+
+            if(isDate_(fromDate) && isDate_(toDate)) {
+                fromDate = parseDate(fromDate);
+                toDate = parseDate(toDate);
+                var totalEl = $('#total');
+                totalEl.html('Cost: $' + dateDiff(fromDate, toDate) * <%=listingData.price%> + '.00');
+            }
         });
     </script>
 </footer>
