@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <% include partials/header%>
+    <% include partials/header %>
 </head>
 <body>
 <div class="nav-container">
-    <% include partials/nav%>
+    <% include partials/nav %>
 </div>
 <div class="home-container">
     <div id="home-top">
@@ -15,7 +15,8 @@
             <div class="card" style="width: 46rem; height: 20rem;">
                 <div class="card-body">
                     <h2 class="card-title">Create new Listing</h2>
-                    <p class="card-text">Create a listing to rent our your assets or to request an asset that you need!</p>
+                    <p class="card-text">Create a listing to rent our your assets or to request an asset that you
+                        need!</p>
                     <a href="/createListing" class="card-link">Create new listing</a>
                 </div>
             </div>
@@ -25,48 +26,51 @@
                 <div class="card-body">
                     <h2 class="card-title">Register new asset</h2>
                     <p class="card-text">Register a new asset with RYA for easy management!</p>
-                    <a href="/addAsset" class="card-link">Register asset</a
+                    <a href="/addAsset" class="card-link">Register asset</a>
                 </div>
             </div>
         </div>
     </div>
-    <h3>Browse existing listings on the marketplace<hr/></h3>
+    <h3>Browse existing listings on the marketplace
+        <hr/>
+    </h3>
 
     <div id="home-bottom">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <% for(i = 0; i < data.length; i++){ %>
-                <% if(data[i].featured){%>
-                <% if(i==1){%>
+                <% if(data[i].featured){ %>
+                <% if(i == 1){ %>
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <%}else{%>
+                <% }else{ %>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <%}%>
-                <%}%>
-                <%}%>
+                <% } %>
+                <% } %>
+                <% } %>
             </ol>
             <div class="carousel-inner">
                 <% for(i = 0; i < data.length; i++){ %>
-                    <% if(data[i].featured){%>
-                        <% if(i==1){%>
-                            <div class="carousel-item active">
-                                <img class="d-block w-100" src="//placehold.it/400x200" alt="First slide">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5><%= data[i].title%></h5>
-                                    <p><%= data[i].description%></p>
-                                </div>
-                            </div>
-                        <%}else{%>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="//placehold.it/400x200" alt="First slide">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5><%= data[i].title%></h5>
-                                    <p><%= data[i].description%></p>
-                                </div>
-                            </div>
-                        <%}%>
-                    <%}%>
-                <%}%>
+                <% if(data[i].featured){ %>
+                <% if(i == 1){ %>
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="/images/<%= data[i].title.replace(/\s/g, '') %>.jpg"
+                         alt="First slide">
+                    <div class="carousel-caption d-none d-md-block" style="color:  black;">
+                        <h3><%= data[i].title %></h3>
+                        <h5><%= data[i].description %></h5>
+                    </div>
+                </div>
+                <% }else{ %>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="/images/<%= data[i].title.replace(/\s/g, '') %>.jpg" alt="First slide">
+                    <div class="carousel-caption d-none d-md-block"style="color:  black;">
+                        <h3><%= data[i].title %></h3>
+                        <h5><%= data[i].description %></h5>
+                    </div>
+                </div>
+                <% } %>
+                <% } %>
+                <% } %>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -80,25 +84,34 @@
     </div>
 </div>
 <script type="text/javascript">
-    (function(d, m){
-        var o = {"appId":"1286b3e863dc2ca9fec18164ac7507c3c","isAnonymousChat":true,"conversationTitle":"assets","email":""};
-        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+    (function (d, m) {
+        var o = {
+            "appId": "1286b3e863dc2ca9fec18164ac7507c3c",
+            "isAnonymousChat": true,
+            "conversationTitle": "assets",
+            "email": ""
+        };
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
         s.src = "https://api.kommunicate.io/kommunicate.app";
-        var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
-        window.kommunicate = m; m._globals = o;
+        var h = document.getElementsByTagName("head")[0];
+        h.appendChild(s);
+        window.kommunicate = m;
+        m._globals = o;
     })(document, window.kommunicate || {});
 </script>
 
-<link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+<link rel="stylesheet" type="text/css" href="/stylesheets/style.css"/>
 </body>
 </html>
 
 <!--<script type="text/javascript">-->
-    <!--(function(d, m){-->
-        <!--var o = {"appId":"31aabb43afd149a9a56d6b156ded22d10","isAnonymousChat":true,"conversationTitle":"user","email":""};-->
-        <!--var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;-->
-        <!--s.src = "https://api.kommunicate.io/kommunicate.app";-->
-        <!--var h = document.getElementsByTagName("head")[0]; h.appendChild(s);-->
-        <!--window.kommunicate = m; m._globals = o;-->
-    <!--})(document, window.kommunicate || {});-->
+<!--(function(d, m){-->
+<!--var o = {"appId":"31aabb43afd149a9a56d6b156ded22d10","isAnonymousChat":true,"conversationTitle":"user","email":""};-->
+<!--var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;-->
+<!--s.src = "https://api.kommunicate.io/kommunicate.app";-->
+<!--var h = document.getElementsByTagName("head")[0]; h.appendChild(s);-->
+<!--window.kommunicate = m; m._globals = o;-->
+<!--})(document, window.kommunicate || {});-->
 <!--</script>-->
