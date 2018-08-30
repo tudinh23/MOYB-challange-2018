@@ -11,7 +11,7 @@
     </ul>
 </div>
 <div class="container">
-    <div class="tabContainer">
+    <div class="tabContainer mb-2">
         <ul class="nav nav-tabs" id="createlisting-tab" role="tablist">
             <li class="nav-item" style="width:  50%">
                 <a class="nav-link active" id="listing-tab" data-toggle="tab" href="#listing" role="tab" aria-controls="listing" aria-selected="true" style="color: #000000;">Listing</a>
@@ -26,25 +26,35 @@
             <form method="post" action="/createListing">
                 <div class="form-group">
                     <label for="productTitle__listing">Title of Product</label>
-                    <input type="email" class="form-control" id="productTitle__listing" aria-describedby="emailHelp" placeholder="Enter Title">
+                    <input type="text" class="form-control" id="productTitle__listing" aria-describedby="emailHelp" placeholder="Enter Title">
                 </div>
                 <div class="form-group">
                     <label for="description">Description</label>
-                    <input type="email" class="form-control" id="description" placeholder="Description of the title">
+                    <input type="text" class="form-control" id="description" placeholder="Description of the title">
                 </div>
                 <div class="form-group">
                     <label for="pricep">Price Per day</label>
                     <div class="slidecontainer">
                         <input type="range" min="1" max="100" value="50" class="slider" id="pricep">
-                        <p>Value: <span id="demo"></span></p>
+                        <p>Value: <span id="value"></span></p>
+                    </div>
+                    <div id="alert__listing" class="alert alert-info d-none" role="alert">
+                        The recommended price for a <strong><span id="productPriceRecommend__listing"></span></strong> is usually <strong>$78.30</strong>
                     </div>
                     <script>
-                        var slider = document.getElementById("myRange");
-                        var output = document.getElementById("demo");
+                        var slider = document.getElementById("pricep");
+                        var output = document.getElementById("value");
+                        var productPriceRecommend = document.getElementById("productPriceRecommend__listing");
+                        var alert = document.getElementById("alert__listing");
+                        var prodTitle = document.getElementById("productTitle__listing");
                         output.innerHTML = slider.value;
 
                         slider.oninput = function () {
                             output.innerHTML = this.value;
+                            if (!(prodTitle.value === '')) {
+                                productPriceRecommend.innerHTML = prodTitle.value;
+                                alert.classList.remove("d-none");
+                            }
                         }
                     </script>
                 </div>
@@ -82,8 +92,8 @@
         <div class="tab-pane fade" id="request" role="tabpanel" aria-labelledby="request-tab">
             <form method="post" action="/createListing">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Title of Product</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Title">
+                    <label for="productTitle__request">Title of Product</label>
+                    <input type="email" class="form-control" id="productTitle__request" aria-describedby="emailHelp" placeholder="Enter Title">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Description</label>
@@ -92,17 +102,28 @@
                 <label for="exampleInputPassword1">Price Per day</label>
                 <div class="slidecontainer">
                     <input type="range" min="1" max="100" value="50" class="slider" id="myRange1">
-                    <p>Value: <span id="demo1"></span></p>
+                    <p>Value: <span id="value1"></span></p>
+                </div>
+                <div id="alert__request" class="alert alert-info d-none" role="alert">
+                    The recommended price for a <strong><span id="productPriceRecommend__request"></span></strong> is usually <strong>$50.00</strong>
                 </div>
                 <script>
                     var slider1 = document.getElementById("myRange1");
-                    var output1 = document.getElementById("demo1");
+                    var output1 = document.getElementById("value1");
+                    var productPriceRecommend1 = document.getElementById("productPriceRecommend__request");
+                    var alert1 = document.getElementById("alert__request");
+                    var prodTitle1 = document.getElementById("productTitle__request");
+
                     output1.innerHTML = slider1.value;
 
                     slider1.oninput = function () {
                         output1.innerHTML = this.value;
-                    }
-                </script>
+                        if (!(prodTitle1.value === '')) {
+                            productPriceRecommend1.innerHTML = prodTitle1.value;
+                            alert1.classList.remove("d-none");
+                        }
+                    };
+                    </script>
                 <select class="custom-select custom-select-lg mb-3">
                     <option selected>Categories</option>
                     <option value="1">Tools</option>
