@@ -2,7 +2,7 @@
   {
     "title" : "Jack Hammer",
     "description" : "Jack hammer, Pretty new, hasnt had much use",
-    "price" : 40,
+    "price" : 155,
     "category" : "tools",
     "featured" : false,
     "type" : "request"
@@ -10,7 +10,7 @@
   {
     "title" : "Circular Saw",
     "description" : "Circular, Pretty new, hasnt had much use",
-    "price" : 20,
+    "price" : 85,
     "category" : "tools",
     "featured" : true,
     "type" : "listing"
@@ -18,7 +18,7 @@
   {
     "title" : "Ice cream fridge",
     "description" : "Looking for an ice cream fridge for the next 2 days",
-    "price" : 50,
+    "price" : 199,
     "category" : "kitchen",
     "featured" : true,
     "type" : "request"
@@ -26,7 +26,7 @@
   {
     "title" : "Van",
     "description" : "Van, Low milage, hasnt had much use",
-    "price" : 60,
+    "price" : 125,
     "category" : "vehical",
     "featured" : true,
     "type" : "listing"
@@ -34,7 +34,7 @@
   {
     "title" : "Oven",
     "description" : "oven, Pretty new, hasnt had much use",
-    "price" : 20,
+    "price" : 89.99,
     "category" : "kitchen",
     "featured" : true,
     "type" : "listing"
@@ -42,17 +42,17 @@
   {
     "title" : "Looking for Circular Saw",
     "description" : "Circular Saw needed for a 3 day job",
-    "price" : 20,
+    "price" : 75,
     "category" : "tools",
-    "featured" : true,
+    "featured" : false,
     "type" : "request"
   },
   {
-    "title" : "Circular Saw",
+    "title" : "Wanting circular saw",
     "description" : "looking for a saw for the next few days",
-    "price" : 25,
+    "price" : 80,
     "category" : "tools",
-    "featured" : true,
+    "featured" : false,
     "type" : "request"
   }
 ]
