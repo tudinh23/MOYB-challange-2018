@@ -27,7 +27,7 @@
         <% for(i = 0; i < data.length; i++){ %>
         <div class="col-mb align-self-center">
             <div class="card" style="width: 19rem;">
-                <img class="card-img-top" src="//placehold.it/500x500" alt="Card image cap">
+                <img class="card-img-top" src="/images/<%=data[i].image%>.jpg" alt="Card image cap">
                 <div class="card-body">
                     <%if(data[i].type == "listing"){%>
                     <h5 class="card-title">[LISTING] <%=data[i].title%></h5>

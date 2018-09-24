@@ -9,6 +9,38 @@
 
 <div class="container" style="padding-top: 20px">
     <div class="container-fluid mt-4">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-7 ">
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">  <h3 >My profile<hr/></h3></div>
+                        <div class="panel-body">
+
+                            <div class="box box-info">
+
+                                <div class="box-body">
+                                    <div class="col-sm-6" style="margin-top: 20px;margin-left: 140px;">
+                                        <div  align="center" style="width: 190px;">
+                                            <img alt="User Pic" src="/images/tradeswomen.jpg" id="profile-image1" class="img-circle img-responsive">
+                                            <input id="profile-image-upload" class="hidden" type="file">
+                                            <p style="color:#999;">click here to change profile image</p>
+                                            <!--Upload Image Js And Css-->
+
+                                            <h5>MYOB verified </h5>
+
+
+
+
+
+                                        </div>
+
+                                        <br>
+
+                                        <!-- /input-group -->
+                                    </div>
+                                    <div class="clearfix"></div>
         <h3>My Assets<hr/></h3>
         <div class="row">
             <script>
@@ -26,7 +58,7 @@
             <% for(i = 0; i < data.length; i++){ %>
             <div class="col-mb align-self-center">
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="//placehold.it/500x500" alt="Card image cap">
+                    <img class="card-img-top" src="/images/<%=data[i].title.replace(/ /g,'')%>1.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title"><%=data[i].title%></h5>
                         <div id="asset-button-container<%=data[i].title.replace(/ /g,'-')%>" style="
@@ -64,7 +96,7 @@
         <div class="row">
             <div class="col-mb align-self-center">
                 <div class="card" style="width: 19rem;">
-                    <img class="card-img-top" src="//placehold.it/500x500" alt="Card image cap">
+                    <img class="card-img-top" src="/images/CircularSaw1.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">[LISTING] Circular Saw</h5>
                         <p class="card-text">Pretty new, hasnt had much use fasdlfkjasdlfkjdsaf</p>
